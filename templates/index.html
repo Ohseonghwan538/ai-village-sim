@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI 마을 시뮬레이션</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🏘️ AI 마을 시뮬레이션</h1>
+      <div class="clock" id="clock">⏱ 시작 전 (tick 0)</div>
+    </header>
+
+    <div id="error-box" class="error-box"></div>
+
+    <div class="layout">
+      <div class="map-panel">
+        <div class="map" id="map"></div>
+      </div>
+
+      <div class="side-panel">
+        <div class="controls">
+          <button id="tick-btn">다음 턴 ▶</button>
+          <button id="auto-btn" class="secondary">자동재생</button>
+          <button id="reset-btn" class="secondary">초기화</button>
+          <span class="status" id="status">대기 전</span>
+        </div>
+
+        <div class="log-panel">
+          <h2>📜 로그</h2>
+          <div id="log-entries"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>RAG(memory.py) · 하네스+시뮬레이션(village.py) · 에이전틱(npc.py) · Gemini(llm.py)</footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
