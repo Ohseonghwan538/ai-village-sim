@@ -18,7 +18,7 @@ import time
 from google import genai
 from google.genai import types
 
-MODEL = "gemini-2.5-flash"  # 대안: "gemini-3.1-flash-lite" / "gemini-flash-latest" (더 빠르고 저렴할 수 있음, 발급받은 키의 지역/등급에 따라 사용 가능 여부가 다를 수 있어 안전한 값으로 기본 설정)
+MODEL = "gemini-3.1-flash-lite"  # 대안: "gemini-3.1-flash-lite" / "gemini-flash-latest" (더 빠르고 저렴할 수 있음, 발급받은 키의 지역/등급에 따라 사용 가능 여부가 다를 수 있어 안전한 값으로 기본 설정)
 
 _client = None
 
